@@ -1,24 +1,12 @@
+import os
 import face_recognition
-image = face_recognition.load_image_file(r"Images\Data\jpg")
-face_locations = face_recognition.face_locations(image)
-face_landmarks_list = face_recognition.face_landmarks(image)
+image = face_recognition.load_image_file(r"C:\Users\ugur_\Desktop\Introduction to Biometrics\Assigmment\FaceRecognitionAssiggnment\FaceRecognition\Images\Team1.jpeg")
+face_locations = face_recognition.face_locations(image) #Array of coords of each face
 
-known_image = face_recognition.load_image_file("Ugur_DURA.jpg")
+print(f'There are {len(face_locations)} people in this frame')
 
-face_locations=face_recognition.face_locations(image)
 
-print("I found {} face(s) in this photograph.".format(len(face_locations)))
 
-for face_location in face_locations:
-
-    # Print the location of each face in this image
-    top, right, bottom, left = face_location
-    print("A face is located at pixel location Top: {}, Left: {}, Bottom: {}, Right: {}".format(top, left, bottom, right))
-
-    # You can access the actual face itself like this:
-    face_image = image[top:bottom, left:right]
-    pil_image = Image.fromarray(face_image)
-    pil_image.show()
 
 
 
