@@ -1,13 +1,13 @@
 import face_recognition
 from PIL import Image, ImageDraw
 
-image_of_Ugur=face_recognition.load_image_file('Images/Data/Known/Ugur_DURA.jpg')
+image_of_Ugur=face_recognition.load_image_file('Images/Data/Ugur_DURA.jpg')
 ugur_face_encoding=face_recognition.face_encodings(image_of_Ugur)[0]
 
-image_of_MelikeBilen=face_recognition.load_image_file('Images\Data\Known\Melike BILEN.jpeg')
+image_of_MelikeBilen=face_recognition.load_image_file('Images\Data\Melike BILEN.jpeg')
 MelikeBilen_face_encoding=face_recognition.face_encodings(image_of_MelikeBilen)[0]
 
-image_of_Hatice=face_recognition.load_image_file('Images\Data\Known\Hatice DOSEME.jpeg')
+image_of_Hatice=face_recognition.load_image_file('Images\Data\Hatice DOSEME.jpeg')
 Hatice_face_encoding=face_recognition.face_encodings(image_of_Hatice)[0]
 
 known_face_encodings=[
@@ -27,7 +27,7 @@ known_face_names=[
 
 #Load the Test Image to find faces
 
-test_image=face_recognition.load_image_file('Images\Team1.jpeg')
+test_image=face_recognition.load_image_file('Images\Data\Team1.jpeg')
 
 # Find faces in test image
 face_locations = face_recognition.face_locations(test_image)
